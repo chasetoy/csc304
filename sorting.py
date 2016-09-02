@@ -61,7 +61,7 @@ class sort():
 			aList[j]=aList[aMax]
 			aList[aMax]=temp
 
-		return(list)
+		return(aList)
 
 	def bubble(list):
 		for k in range(len(list)-1,0,-1):
