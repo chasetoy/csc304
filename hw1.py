@@ -1,54 +1,53 @@
-class Fraction:
-    def getNum(self):
-        return self.num
+class Fraction:	
+	
+	def getNum(self):
+		return self.num
 
-    def getDen(self):
-        return self.den
+	def getDen(self):
+		return self.den
 
-    def gcd(self, m, n):
+	def gcd(self,m,n):
 
-    while m % n != 0:
-        oldm = m
+        while m%n != 0:
 
-        oldn = n
+            oldm = m
 
-        m = oldn
+            oldn = n
 
-    n = oldm % oldn
+   			m = oldn
 
+            n = oldm%oldn
 
-return n
+        return n
 
+	def __add__(self,otherfraction):
 
-def __add__(self, otherfraction):
+        newnum = self.num*otherfraction.den + self.den*otherfraction.num
 
+        newden = self.den * otherfraction.den
 
-newnum = self.num * otherfraction.den + self.den * otherfraction.num
+        cd = self.gcd(newnum,newden)
 
-newden = self.den * otherfraction.den
-
-cd = self.gcd(newnum, newden)
-
-return Fraction(newnum // cd, newden // cd)
-
-
-def __sub__(self, otherfraction):
+        return Fraction(newnum//cd,newden//cd)
 
 
-def __init__(self, n, d):
-    self.n = n
-    try:
-        if self.n = int(n) == False:
-            self.n = None
-    except ValueError:
-        print("Value Error : please enter an integer value")
+	def __sub__(self, otherfraction):
 
-    self.d = d
-    try:
-        if self.d = int(d) == False:
-            self.d = None
-    except ValueError:
-        print("Value Error : please enter an integer value")
+
+	def __init__(self,n,d):
+		self.n=n
+		try:
+			if self.n = int(n) == False:
+				self.n = None
+		except ValueError:
+			print("Value Error : please enter an integer value")
+	
+		self.d=d
+		try:
+			if self.d = int(d) == False:
+				self.d = None
+		except ValueError:
+			print("Value Error : please enter an integer value")
 
 
 
