@@ -164,6 +164,11 @@ def main():
 	addfrac = testfrac1 + testfrac2
 	print(addfrac)
 
+	testfrac1 = frac(1, 2)
+	testfrac2 = frac(1, -4)
+	addfrac = testfrac1 + testfrac2
+	print(addfrac)
+
 
 
 main()
