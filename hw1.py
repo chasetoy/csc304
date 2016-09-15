@@ -7,36 +7,24 @@ class frac:
 		return self.den
 
 	def gcd(self,m,n):
-
 		while m%n != 0:
-
 			oldm = m
-
 			oldn = n
-
 			m = oldn
-
 			n = oldm%oldn
-
 		return n
 
 	def __add__(self,otherfraction):
-
 		def gcd(m, n):
 			while m % n != 0:
 				oldm = m
 				oldn = n
-
 				m = oldn
 				n = oldm % oldn
 			return n
-
 		num2 = self.num*otherfraction.den + self.den*otherfraction.num
-
 		den2 = self.den * otherfraction.den
-
 		commonden = gcd(num2, den2)
-
 		return frac(num2//commonden,den2//commonden)
 
 	def __str__(self):
@@ -46,11 +34,9 @@ class frac:
 		while m%n != 0:
 			oldm = m
 			oldn = n
-
 			m = oldn
 			n = oldm%oldn
 		return n
-
 
 	def __ge__(self,n,d):
 		f1=frac(n,d)
@@ -98,15 +84,12 @@ class frac:
 			while m%n != 0:
 				oldm = m
 				oldn = n
-
 				m = oldn
 				n = oldm%oldn
 			return n
-
 		num2 = self.num*otherfrac.den - self.den*otherfrac.num
 		den2 = self.den*otherfrac.den
 		commonden = gcd(num2, den2)
-
 		return frac(num2//commonden,den2//commonden)
 
 	def __mul__(self, otherfrac):
@@ -114,15 +97,12 @@ class frac:
 			while m % n != 0:
 				oldm = m
 				oldn = n
-
 				m = oldn
 				n = oldm % oldn
 			return n
-
 		num2 = self.num*otherfrac.num
 		den2 = self.den*otherfrac.den
 		commondem = gcd(num2, den2)
-
 		return frac(num2//commonden,den2//commondem)
 
 	def __truediv__(self, otherfrac):
@@ -130,15 +110,12 @@ class frac:
 			while m % n != 0:
 				oldm = m
 				oldn = n
-
 				m = oldn
 				n = oldm % oldn
 			return n
-
 		num2 = self.num*otherfrac.den
 		den2 = self.den*otherfrac.num
 		commonden = gcd(num2, den2)
-
 		return frac(num2//commonden,den2//commonden)
 
 	def __init__(self,top,bottom):
@@ -148,7 +125,6 @@ class frac:
 				self.num = None
 		except ValueError:
 			print("Value Error : please enter an integer value")
-	
 		self.den=bottom
 		try:
 			if self.den == int(bottom) == False:
@@ -160,7 +136,7 @@ class frac:
 
 def main():
 	testfrac1 = frac(1, 2)
-	testfrac2 = frac(1, 4)
+	testfrac2 = frac(-2, 9)
 	addfrac = testfrac1 + testfrac2
 	print(addfrac)
 
@@ -168,8 +144,6 @@ def main():
 	testfrac2 = frac(1, -4)
 	addfrac = testfrac1 + testfrac2
 	print(addfrac)
-
-
 
 main()
 
