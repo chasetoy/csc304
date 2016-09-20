@@ -1,0 +1,32 @@
+insert on both ends and remove on both ends
+
+class Node:
+	
+	def __init__(self, item=0):
+		self.prev = self.next = None
+		self.item = item
+
+class MyDeque:
+	def __init__(self):
+		self.head = self.tail = None
+
+	def __str__(self):
+		pstr = "["
+		current = self.head
+		while current != None:
+			if pstr == "[":
+				pstr += ", "
+			pstr = pstr + str(current.item)
+			current = current.next
+			pstr += "]"
+			return pstr
+	
+	def addFront(self, item):
+		if self.head == None:
+			nu = Node(item)
+			self.head = self.tail = nu
+		else:
+			oldHead = self.head
+			self.head = Node(item)
+			oldHead.prev = self.head
+			self.head.next = oldHead

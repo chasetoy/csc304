@@ -1,0 +1,27 @@
+notes 09-20-16
+chase toy
+csc 304
+
+recursion:
+	when is it okay for a function to call itself? Does it ever make sense?
+
+alg sum(L):
+	let n = the number of elements of L
+	if L is empty, return zero
+	else:
+		let x be the first element of L
+		let remainder be the last n-1 elements of L
+		return x+Sum(remainder)
+
+def sqrt(a):
+	if a < 0 : raise ComplexRootException
+	approx = a/2
+	return approxsqrt(a, approx, le-12)
+
+def approxsqrt(a, guess, eps):
+	if abs(A - guess * guess) < eps: return guess
+	else:
+		guess = (guess + a/guess)/2
+		return approxsqrt(a, guess, eps)
+
+
