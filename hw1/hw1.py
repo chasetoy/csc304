@@ -1,4 +1,22 @@
-class frac:
+def gcd(m, n):
+	while m % n != 0:
+		oldm = m
+		oldn = n
+		m = oldn
+		n = oldm % oldn
+	return n
+
+class Fraction:
+
+	def __init__(self,upper,lower):
+		self.num = upper
+		self.den = lower
+		if self.den < 0:
+			self.num = -self.num
+			self.den = -self.den
+		commonden = gcd(self.num, self.den)
+		self.num//=commonden
+		self.den//=commonden
 	
 	def getNum(self):
 		return self.num
@@ -6,37 +24,13 @@ class frac:
 	def getDen(self):
 		return self.den
 
-	def gcd(self,m,n):
-		while m%n != 0:
-			oldm = m
-			oldn = n
-			m = oldn
-			n = oldm%oldn
-		return n
-
 	def __add__(self,otherfraction):
-		def gcd(m, n):
-			while m % n != 0:
-				oldm = m
-				oldn = n
-				m = oldn
-				n = oldm % oldn
-			return n
 		num2 = self.num*otherfraction.den + self.den*otherfraction.num
 		den2 = self.den * otherfraction.den
-		commonden = gcd(num2, den2)
-		return frac(num2//commonden,den2//commonden)
+		return Fraction(num2,den2)
 
 	def __str__(self):
 		return str(self.num)+"/"+str(self.den)
-
-	def gcd(m,n):
-		while m%n != 0:
-			oldm = m
-			oldn = n
-			m = oldn
-			n = oldm%oldn
-		return n
 
 	def __ge__(self,n,d):
 		f1=frac(n,d)
@@ -80,68 +74,32 @@ class frac:
 
 
 	def __sub__(selfself, otherfrac):
-		def gcd(m,n):
-			while m%n != 0:
-				oldm = m
-				oldn = n
-				m = oldn
-				n = oldm%oldn
-			return n
 		num2 = self.num*otherfrac.den - self.den*otherfrac.num
 		den2 = self.den*otherfrac.den
-		commonden = gcd(num2, den2)
-		return frac(num2//commonden,den2//commonden)
+		return Fraction(num2,den2)
 
 	def __mul__(self, otherfrac):
-		def gcd(m, n):
-			while m % n != 0:
-				oldm = m
-				oldn = n
-				m = oldn
-				n = oldm % oldn
-			return n
 		num2 = self.num*otherfrac.num
 		den2 = self.den*otherfrac.den
-		commondem = gcd(num2, den2)
-		return frac(num2//commonden,den2//commondem)
+		return Fraction(num2,den2)
 
 	def __truediv__(self, otherfrac):
-		def gcd(m, n):
-			while m % n != 0:
-				oldm = m
-				oldn = n
-				m = oldn
-				n = oldm % oldn
-			return n
 		num2 = self.num*otherfrac.den
 		den2 = self.den*otherfrac.num
-		commonden = gcd(num2, den2)
-		return frac(num2//commonden,den2//commonden)
+		return Fraction(num2,den2)
 
-	def __init__(self,top,bottom):
-		self.num=top
-		try:
-			if self.num == int(top) == False:
-				self.num = None
-		except ValueError:
-			print("Value Error : please enter an integer value")
-		self.den=bottom
-		try:
-			if self.den == int(bottom) == False:
-				self.den = None
-		except ValueError:
-			print("Value Error : please enter an integer value")
+
 
 
 
 def main():
-	testfrac1 = frac(1, 2)
-	testfrac2 = frac(-2, 9)
+	testfrac1 = Fraction(1, 2)
+	testfrac2 = Fraction(-2, 9)
 	addfrac = testfrac1 + testfrac2
 	print(addfrac)
 
-	testfrac1 = frac(1, 2)
-	testfrac2 = frac(1, -4)
+	testfrac1 = Fraction(1, 2)
+	testfrac2 = Fraction(1, -4)
 	addfrac = testfrac1 + testfrac2
 	print(addfrac)
 
@@ -163,6 +121,10 @@ def main():
 
 	test1 = testfrac1.__add__(testfrac2)
 	print(test1)
+
+
+	test2 = testfrac1+testfrac2
+	print(test2)
 
 
 main()
