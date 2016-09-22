@@ -5,6 +5,9 @@
 # file for homework 3
 
 import Transpose
+from time import clock
+from random import Random
 
-def main():
+if __name__ == "__main__":
 	
+
