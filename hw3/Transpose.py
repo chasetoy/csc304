@@ -1,9 +1,10 @@
 def makeTranspose(A):
-    for i in range(len(A)-1):
-        for j in range(i+1,len(A[i])):
-            temp = A[i][j]
-            A[i][j] = A[j][i]
-            A[j][i] = temp
+	for i in range(len(A)-1):
+		for j in range(i+1,len(A[i])):
+			temp = A[i][j]
+			A[i][j] = A[j][i]
+			A[j][i] = temp
+	return(A)
 
 def transpose(A):
     B = list()

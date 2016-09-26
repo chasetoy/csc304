@@ -1,0 +1,21 @@
+CSC304
+notes
+09-22-16
+
+best case, worst case, and average case analysis:
+
+best case : matches on the first case
+worst case : matches on the last case, n number of loops
+average case : finds half way through, n/2 number of loops
+
+Some Algorithm Classifications:
+
+1. Precise
+2. Heuristic
+3. Brute-Force
+4. Greedy
+
+*maybe some half assed python code*
+
+*i was right it was handwritten sudo code that was useless*
+
