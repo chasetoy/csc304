@@ -18,11 +18,12 @@ Another Very Important type of search
 --------------------------------------
 Hashing and Hash tables (also known as "scanner tables")
 
+Hashing
+--------------------
+Scrambling + addressing = Hashing
 
 
 ############################################## ALL CODE WILL BE HERE #######################################################
 
 
 sequential search code (python file)
-
-def sequentialSearch():

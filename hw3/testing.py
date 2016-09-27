@@ -7,12 +7,16 @@ def main():
     size=5
     size2=3
     i=0
-    for x in range(size):
-            a.append([])
+    count=0
+    while count != 1000:
+        for x in range(size):
+            a.append([i])
             for y in range(size2):
                 a[x].append(i)
-                i+=1
+        i+=1
+        count+=1
 
     print(a)
+    print(a[:3])
 
 main()
