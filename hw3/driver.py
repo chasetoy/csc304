@@ -1,5 +1,6 @@
 # chase toy
 # csc 304
+# homework 3
 # 09/22/16
 
 fout = open("triples.txt","w")
