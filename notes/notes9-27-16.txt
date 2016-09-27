@@ -1,0 +1,28 @@
+notes 09-27-16
+chase toy
+csc 304
+
+Exam #1 is a week from Thursday (October 6)
+
+
+Another Dynamic-Programming Problem
+------------------------------------
+0, 1 Knapsack
+
+each item has a value and a weight, using recursion,
+select the items that give you the highest theft amount,
+but are still within the 100 lbs weightlimit
+
+
+Another Very Important type of search
+--------------------------------------
+Hashing and Hash tables (also known as "scanner tables")
+
+
+
+############################################## ALL CODE WILL BE HERE #######################################################
+
+
+sequential search code (python file)
+
+def sequentialSearch():
