@@ -16,6 +16,12 @@ def main():
         i+=1
         count+=1
 
-    print(a)
+    twod_list = []
+    new = []
+    for i in range (0, 10):
+        for j in range (0, 10):
+            new.append(foo)
+        twod_list.append(new)
+        new = []
 
 main()

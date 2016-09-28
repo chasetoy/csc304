@@ -13,15 +13,18 @@ def main():
 	a=[]
 	b=[]
 	size=1
-	size2=10
+	size2=2
+	size3=3
+	size4=4
 	i=1
 	count=0
 	while count != 1000:
 		for i in range(size, size2):
 			for j in range(size, size2):
 				b.append(i)
-			a.append(b)
-			b=[]
+				a.append(b)
+		size+=1
+		size2+=1
 		count+=1
 		a1 = makeTranspose(a)
 		t1 = time.time() - startTime
@@ -30,11 +33,6 @@ def main():
 		numRow = len(a)
 		numCol = len(a[0])
 		N = str(numRow) + "X" + str(numCol)
-		print(count)
-		print("N = ", N)
-		print("T(n) = ", t1, "seconds.")
-		print("M(n) = ", t2, "seconds.")
-		print(" ")
 		output = str(N + "\t" + str(t1) + "\t" + str(t2) + "\n")
 		fout.write(output)
 
