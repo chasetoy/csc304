@@ -44,3 +44,18 @@ it requires no multiplication!
 separate chaining
 -----------------------
 *read the book and go over slides from class, also email Yeager
+
+Hash table analysis  (expected number of probes)
+--------------------
+separate chaining-
+    (*1 in notebook) unsuccessful search- 1 + lambda
+    (*2 in notebook) successful search  - 1 + lambda/2
+
+linear open addressing-
+    (*3 in notebook) unsuccessful search- 1/2(1+(1/(1-lamda)^2))
+    (*4 in notebook) successful search  - 1/2(1+(1/(1-lamda)))
+    
+
+dict and set
+----------------
+variable-sized hash tables
