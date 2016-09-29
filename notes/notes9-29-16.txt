@@ -22,3 +22,25 @@ Primary and Secondary Clustering
 
 
 2.) seconday clustering occurs when probe sequences merge in other ways.
+
+
+Why does the book advocate making the size of the table a prime number?
+------------------------------------------------------------------------
+
+consider census years as keys   1860 ]
+                                1870 > periodic key
+                                1880 ]
+
+if there is periodic behavior in the key set,
+and the period has common factors with the table size,
+then a simple % on hash (n = table size) will cause clustering
+in the hashed keys.
+
+Quadratic Open addressing
+----------------------------
+
+it requires no multiplication!
+
+separate chaining
+-----------------------
+*read the book and go over slides from class, also email Yeager
