@@ -1,0 +1,6 @@
+csc 304
+notes 09-29-16
+chase toy
+
+sorting and searching (continued)
+
