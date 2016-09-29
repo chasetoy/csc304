@@ -4,3 +4,21 @@ chase toy
 
 sorting and searching (continued)
 
+collision and collision resolution
+-----------------------------------
+
+open addressing and separate chaining
+
+
+deleting from a hash table
+---------------------------
+1.) for separate chaining, it is just a deletion from a list.
+2.) for any open addressing techniques, you must repair every probe sequence
+the key happens to be a part of.
+
+Primary and Secondary Clustering
+---------------------------------
+1.) primray clustering occurs when many keys hash to the same address.
+
+
+2.) seconday clustering occurs when probe sequences merge in other ways.
