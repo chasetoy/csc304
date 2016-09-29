@@ -59,3 +59,12 @@ linear open addressing-
 dict and set
 ----------------
 variable-sized hash tables
+
+
+reading a text file
+---------------------
+
+infile = open(file.ext, "r")
+                *string*
+
+contents = infile.read()
