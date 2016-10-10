@@ -26,13 +26,19 @@ def main():
 		size+=1
 		size2+=1
 		count+=1
+		start1 = time.time()
 		a1 = makeTranspose(a)
-		t1 = time.time() - startTime
+		t1 = time.time() - start1
+		start2 = time.time()
 		a2 = transpose(a)
-		t2 = time.time() - startTime
+		t2 = time.time() - start2
 		numRow = len(a)
 		numCol = len(a[0])
 		N = str(numRow) + "X" + str(numCol)
+	#	print(a1)
+		print(N)
+		print(t1)
+		print(t2)
 		output = str(N + "\t" + str(t1) + "\t" + str(t2) + "\n")
 		fout.write(output)
 
