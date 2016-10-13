@@ -12,7 +12,7 @@ class sort():
 
 	def getSize():
 		import random
-		size=random.randint(10000,10000)
+		size=random.randint(100,100)
 
 		return(size)
 
@@ -105,35 +105,35 @@ def main():
 
 	size=widow.getSize()
 	print()
-#	print("SIZE      : ", size)
+	print("SIZE      : ", size)
 	print()
 
 	odin=widow.init(list, size)
 	zeta=widow.make(odin)
-#	print("init     : ", zeta)
+	print("init     : ", zeta)
 	print()
 
 	widow.shuffle(zeta)
-#	print("shuffled : ", zeta)
+	print("shuffled : ", zeta)
 	print()
 
 	newZeta=widow.insertion(zeta)
-#	print("insertion: ", newZeta)
+	print("insertion: ", newZeta)
 	print()
 
 	widow.shuffle(zeta)
 	zetaPrime=widow.selection(zeta)
-#	print("selection: ", zetaPrime)
+	print("selection: ", zetaPrime)
 	print()
 
 	widow.shuffle(zeta)
 	omega=widow.bubble(zeta)
-#	print("bubble   : ", omega)
+	print("bubble   : ", omega)
 	print()
 
 	widow.shuffle(zeta)
 	chase=widow.cSort(zeta)
-#	print("cSort    : ", chase)
+	print("cSort    : ", chase)
 
 	print("DONE")
 
