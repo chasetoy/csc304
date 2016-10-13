@@ -13,7 +13,7 @@ rearrange the list to have the same items in a sorted order.
 size of the problem : # of items to sort
 
 
-Bubble Sort and Selection Sort
+** Bubble Sort and Selection Sort **
 
 -----------------------------------------------------
 BUBBLE SORT:
@@ -45,3 +45,6 @@ def selection(aList):
 		return(aList)
 -----------------------------------------------------
 
+** Early Exit Bubble Sort **
+
+^^ look at this algorithm ^^
