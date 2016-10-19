@@ -48,3 +48,4 @@ def selection(aList):
 ** Early Exit Bubble Sort **
 
 ^^ look at this algorithm ^^
+

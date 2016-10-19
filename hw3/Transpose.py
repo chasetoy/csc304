@@ -4,7 +4,6 @@ def makeTranspose(A):
 			temp = A[i][j]
 			A[i][j] = A[j][i]
 			A[j][i] = temp
-	return(A)
 
 def transpose(A):
     B = list()

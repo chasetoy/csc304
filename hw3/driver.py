@@ -9,25 +9,30 @@ from Transpose import makeTranspose
 import time
 from random import Random
 startTime = time.time()
+
+def squareMatrix(n):
+    a=[]
+    for i in range(n): a.append([1]*n)
+    return(a)
+
+def makeBiggerMatrix(a,m):
+    for i in range(len(a)):
+    	a[i]=a[i]+([1]*m)
+    newRow = [1]*(len(a)+m)
+    for j in range(m): a.append(newRow)
+
 def main():
-	a=[]
-	b=[]
 	size=1
 	size2=2
 	size3=3
 	size4=4
 	i=1
 	count=0
-	while count != 1000:
-		for i in range(size, size2):
-			for j in range(size, size2):
-				b.append(i)
-				a.append(b)
-		size+=1
-		size2+=1
+	while count != 110:
+		a=squareMatrix(size2)
 		count+=1
 		start1 = time.time()
-		a1 = makeTranspose(a)
+		makeTranspose(a)
 		t1 = time.time() - start1
 		start2 = time.time()
 		a2 = transpose(a)
@@ -41,6 +46,7 @@ def main():
 		print(t2)
 		output = str(N + "\t" + str(t1) + "\t" + str(t2) + "\n")
 		fout.write(output)
+		size2+=10
 
 main()
 fout.close()
