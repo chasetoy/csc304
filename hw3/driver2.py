@@ -13,7 +13,7 @@ def makeArray(n):
     return list
 
 def main():
-    n=20000
+    n=30000
     k=5000
     list=makeArray(2*n)
     while k<=n:
