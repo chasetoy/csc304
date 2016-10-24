@@ -1,0 +1,48 @@
+csc 304
+notes 10-20-2016
+chase toy
+
+
+analysis of selection sort:
+============================
+n-1 passes
+each pass does only one swap, at the end
+each pass requires i-1 comparrisons where i --> n down to 2.
+
+analysis of bubble sort:
+=========================
+n-1 passes
+with each pass, say the i'th pass, make n-i comparrisons
+
+insertion sort:
+================
+start by assuming that the list is organized into a 
+one-element sorted part & an unsorted part.
+
+
+def binarySearchAux(L,i,j,key):
+    if i>j:
+        return None
+    else:
+        mid = (i+j)//2
+        if L[mid] > key:
+            return binarySearchAux(L,i,mid-1,key)
+        elif L[mid] < key:
+            return binarySearchAux(L,mid+1,j,key)
+        else:
+            return mid
+
+
+node : undefined term
+edge : directed downward
+root : no edges coming into it (exactly one)
+child: parent child follows the downward direction of the edge
+descendant : a series of parent child relationships chained together 
+path : a series of nodes and edges with an acestor
+parent : 
+sibling : 
+subtree : a node and its descendants
+leaf node : a node with no descendants
+level : the root is at the top level, and if two nodes are at the same level 
+        then the path from the root has the same # of edges
+height : 

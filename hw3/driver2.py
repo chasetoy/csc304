@@ -13,14 +13,15 @@ def makeArray(n):
     return list
 
 def main():
-    n=30000
+    n=20000
     k=5000
-    list=makeArray(2*n)
+    xyz=makeArray(2*n)
     while k<=n:
         start1=time.time()
-        c=list[100:k+100]
+        c=xyz[100:k+100]
         T_k=time.time()-start1
         fout.write("%d\t%e\n"%(k,T_k))
         k=k+100
 
 main()
+fout.close()
