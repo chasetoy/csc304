@@ -3,25 +3,25 @@
 #hw4: bubble sort and times
 
 
-def bubbleSort(alist):
-	for k in range(len(alist)-1,0,-1):
+def bubbleSort(list):
+	for k in range(len(list)-1,0,-1):
 		for i in range(k):
-			if alist[i]>alist[i+1]:
-				temp=alist[i]
-				alist[i]=alist[i+1]
-				alist[i+1]=temp
-	return(alist)
+			if list[i]>list[i+1]:
+				temp=list[i]
+				list[i]=list[i+1]
+				list[i+1]=temp
+	return(list)
 
-def selectionSort(alist):
-	for j in range(len(alist)-1,0,-1):
+def selectionSort(list):
+	for j in range(len(list)-1,0,-1):
 		aMax=0
 		for k in range(1,j+1):
-			if alist[k]>alist[aMax]:
+			if list[k]>list[aMax]:
 				aMax=k
-		temp=alist[j]
-		alist[j]=alist[aMax]
-		alist[aMax]=temp
-	return(alist)
+		temp=list[j]
+		list[j]=list[aMax]
+		list[aMax]=temp
+	return(list)
 
 def quickSort(alist):
        quickSortHelper(alist,0,len(alist)-1)
@@ -54,11 +54,6 @@ def partition(alist,first,last):
    alist[rightmark] = temp
    return rightmark
 
-def shuffle(alist):
-    		import random
-		random.shuffle(alist)
-		return(alist)
-
 #function to create list given by Yeager
 def dataOfSize(n):
     import random
@@ -74,28 +69,26 @@ import random
 
 def main():
 	count=0
-	xyz=random.randint(100,200)
-	#alist=dataOfSize(xyz)
-	while count != 1000:
-		xyz+=1
+	while count <= 1000:
 		count+=1
-		alist=dataOfSize(xyz)
-		N=len(alist)
+		xyz=random.randint(100,1000)
+		aList=dataOfSize(xyz)
+		N=len(aList)
 		#bubble sort section
-		bubble=shuffle(alist)
 		bStart=time.time()
-		bubble=bubbleSort(bubble)
+		bubble=bubbleSort(aList)
 		bN=time.time()-bStart
 		#selection sort section
-		selection=shuffle(alist)
 		sStart=time.time()
-		selection=selectionSort(selection)
+		selection=selectionSort(aList)
 		sN=time.time()-sStart
 		#quick sort section
-		quick=shuffle(alist)
 		qStart=time.time()
-		quick=quickSort(quick)
+		quick=quickSort(aList)
 		qN=time.time()-qStart
+		#print(bN)
+		#print(sN)
+		#print(qN)
 		output=(str(N) + "\t" + str(bN) + "\t" + str(sN) + "\t" + str(qN) + "\n")
 		fout.write(output)
 

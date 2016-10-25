@@ -1,0 +1,13 @@
+csc 304
+chase toy
+notes 10-25-2016
+
+class Tree:
+    def __init__(self, value):
+        self.rep=[value]
+        
+    def insertFirst(self, subtree):
+        self.rep.insert(1,subtree)
+
+    def insertLast(self,subtree):
+        self.rep.append(subtree)
