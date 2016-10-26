@@ -1,6 +1,6 @@
 #chase toy
 #csc 304
-#hw4: bubble sort and times
+#hw4: bubble sort, selection sort, quick sort and time graphs
 
 
 def bubbleSort(alist):
