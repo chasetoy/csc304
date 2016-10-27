@@ -1,0 +1,11 @@
+chase toy
+csc 304
+notes 10-27-16
+
+class BinaryTree
+
+
+a BinaryTree is complete provided that all
+the levels are full, except possibly the last,
+and the nodes on the last level are left justified.
+
