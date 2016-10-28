@@ -82,16 +82,19 @@ def main():
 		alist=dataOfSize(xyz)
 		N=len(alist)
 		#bubble sort section
+		#print("bubbleSort" , count)
 		bubble=shuffle(alist)
 		bStart=time.time()
 		bubble=bubbleSort(bubble)
 		bN=time.time()-bStart
 		#selection sort section
+		#print("selectionSrot", count)
 		selection=shuffle(alist)
 		sStart=time.time()
 		selection=selectionSort(selection)
 		sN=time.time()-sStart
 		#quick sort section
+		#print("quickSort", count)
 		quick=shuffle(alist)
 		qStart=time.time()
 		quick=quickSort(quick)
