@@ -2,3 +2,44 @@ csc 304
 chase toy
 notes 11-01-16
 
+Describe the heap property for...
+
+a max heap : the parent value >= each child value
+          21
+          /\
+        17  13
+
+a min heap : the parent value <= each chile value 
+          13
+          /\
+        20  80
+
+Given a set of keys, is there only one max heap that can be built from it?
+NO!
+
+             33
+            /  \
+          18    21
+          /\    /\ 
+         6  ?  ?  ?
+
+*if he asks for a min or max heap, dont just draw a heap,
+ draw whichever one he asks for or it will be a zero.
+
+
+How does the public interface of PriorityQueue differ from that of Queue?
+=========================================================================
+public interface is the same but implemented as a max or min heap
+depending on what you want as a "high priority"
+
+Describe the percUp and percDown helper functions
+=================================================
+typically used on "almost" heaps.
+
+The Heap Sort Algorithm
+=======================
+start with a list
+convert to a max heap using the algorithm on the previous slide.
+sort the heap.
+???
+
