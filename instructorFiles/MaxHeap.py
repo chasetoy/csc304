@@ -52,7 +52,7 @@ class MaxHeap:
 if __name__ == "__main__":
     import random
     rng = random.Random()
-    for testSize in range(20,1000,20):
+    for testSize in range(20,10000,20):
         origList = [rng.randrange(testSize*2) for i in range(testSize)]
 
         testList = origList + []
