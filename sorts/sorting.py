@@ -34,6 +34,37 @@ class sort():
 		random.shuffle(list)
 		return(list)
 
+	def quickSortHelper(alist,first,last):
+		if first<last:
+			splitpoint = sort.partition(alist,first,last)
+			sort.quickSortHelper(alist,first,splitpoint-1)
+			sort.quickSortHelper(alist,splitpoint+1,last)
+
+
+	def partition(alist,first,last):
+		pivotvalue = alist[first]
+		leftmark = first+1
+		rightmark = last
+		done = False
+		while not done:
+			while leftmark <= rightmark and alist[leftmark] <= pivotvalue:
+				leftmark = leftmark + 1
+			while alist[rightmark] >= pivotvalue and rightmark >= leftmark:
+				rightmark = rightmark -1
+			if rightmark < leftmark:
+				done = True
+			else:
+				temp = alist[leftmark]
+				alist[leftmark] = alist[rightmark]
+				alist[rightmark] = temp
+		temp = alist[first]
+		alist[first] = alist[rightmark]
+		alist[rightmark] = temp
+		return rightmark
+
+	def quickSort(alist):
+		sort.quickSortHelper(alist,0,len(alist)-1)
+
 	def insertion(list):
 		for i in range(1,len(list)):
 
@@ -82,7 +113,7 @@ class sort():
 			sRgt=sort.insertion(rgt)
 
 			fin=sLft+sRgt
-			done=sort.insertion(fin)
+			done=sort.quickSort(fin)
 		return(done)
 
 	def chunk(list):
@@ -97,43 +128,59 @@ class sort():
 
 		return(lft, rgt)
 
-
+fout=open("sort.txt","w")
 
 def main():
 
-	widow=sort
+	count=0
+	xyz=random.randint(100,200)
+	while count != 1000:
+		widow=sort
+		xyz+=1
+		count+=1
+		
+		odin=widow.init(list, xyz)
+		zeta=widow.make(odin)
+		#print("init     : ", zeta)
+		#print()
 
-	size=widow.getSize()
-	print()
-	print("SIZE      : ", size)
-	print()
+		widow.shuffle(zeta)
+		#print("shuffled : ", zeta)
+		#print()
 
-	odin=widow.init(list, size)
-	zeta=widow.make(odin)
-	print("init     : ", zeta)
-	print()
+		iStart=time.time()
+		newZeta=widow.insertion(zeta)
+		#print("insertion: ", newZeta)
+		iN=time.time()-iStart
+		#print()
 
-	widow.shuffle(zeta)
-	print("shuffled : ", zeta)
-	print()
+		widow.shuffle(zeta)
+		sStart=time.time()
+		zetaPrime=widow.selection(zeta)
+		sN=time.time()-sStart
+		#print("selection: ", zetaPrime)
+		#print()
 
-	newZeta=widow.insertion(zeta)
-	print("insertion: ", newZeta)
-	print()
+		widow.shuffle(zeta)
+		bStart=time.time()
+		omega=widow.bubble(zeta)
+		bN=time.time()-bStart
+		#print("bubble   : ", omega)
+		#print()
 
-	widow.shuffle(zeta)
-	zetaPrime=widow.selection(zeta)
-	print("selection: ", zetaPrime)
-	print()
+		widow.shuffle(zeta)
+		cStart=time.time()
+		chase=widow.cSort(zeta)
+		cN=time.time()-cStart
+		#print("cSort    : ", chase)
 
-	widow.shuffle(zeta)
-	omega=widow.bubble(zeta)
-	print("bubble   : ", omega)
-	print()
+		widow.shuffle(zeta)
+		qStart=time.time()
+		quick=widow.quickSort(zeta)
+		qN=time.time()-qStart
 
-	widow.shuffle(zeta)
-	chase=widow.cSort(zeta)
-	print("cSort    : ", chase)
+		output=(str(xyz) + "\t" + str(iN) + "\t" + str(sN) + "\t" + str(bN) + "\t" + str(cN) + "\t" + str(qN) + "\n")
+		fout.write(output)
 
 	print("DONE")
 
