@@ -10,4 +10,28 @@ class BinarySearchTree:
             self.root = None
         else:
             self.root = TreeNode(rootKey, rootValue)
-            
+    def put(self,key,value):
+        if key<self.key:
+            if self.leftchild == None:
+                self.leftchild=TreeNode(key,value)
+            else:
+                self.leftchild.put(key,value)
+        elif key > self.key:
+            if self.rightchild == None:
+                self.rightchild=TreeNode(key,value)
+            else:
+                self.rightchild.put(key,value)
+
+
+    def get(self,key):
+        if key<self.key:
+            if self.leftchild==None:
+                raise KeyError("Error: insert error message here from slides")
+            else self.leftchild.get(key)
+        elif key>self.key:
+           if self.rightchild==None:
+                raise KeyError("Error: insert error message here from slides")
+            else self.rightchild.get(key) 
+        else:
+            return self.value
+                
