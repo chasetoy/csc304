@@ -1,0 +1,17 @@
+csc 304 notes
+chase toy
+11-10-2016
+
+Some Important Graph Algorithms
+===============================
+
+1. Searches
+  a. breadth-first
+  b. depth-first
+2. Shortest Distance
+  a. point-to-point (Dijkstra's)
+  b. all-pairs(Floyd-Warshall)
+3. Minimum Spanning Tree
+  a. Kruskal's algorithm
+  b. Prim's algorithm
+4. Topological Sort
