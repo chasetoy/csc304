@@ -1,0 +1,19 @@
+csc 304 notes
+chase toy
+11-15-16
+
+file open
+==========
+
+fp=open("text.txt", "r")
+line=fp.readline()
+while line != " ":
+  process
+  the
+  line(s)
+  line=fp.readline()
+
+maxheap : every subtree of the heap has its largest value at the root
+minheap : every subtree of the heap has its smallest value at the root
+
+not going to ask for the entire treeNode class but may ask us to add to it.
