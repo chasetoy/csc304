@@ -56,7 +56,7 @@ def partition(alist,first,last):
 
 def shuffle(alist):
     		import random
-		random.shuffle(alist)
+        random.shuffle(alist)
 		return(alist)
 
 #function to create list given by Yeager
